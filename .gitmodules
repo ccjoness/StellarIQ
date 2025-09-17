@@ -1,0 +1,6 @@
+[submodule "StellarIQ_API"]
+	path = StellarIQ_API
+	url = https://github.com/ccjoness/StellarIQ_API
+[submodule "StellarIQ_Mobile"]
+	path = StellarIQ_Mobile
+	url = https://github.com/ccjoness/StellarIQ_Mobile
