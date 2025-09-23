@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="512" cy="512" r="512" fill="url(#backgroundGradient)"/>
+  
+  <!-- Star/Stellar Symbol -->
+  <g transform="translate(512, 300)">
+    <!-- Main Star -->
+    <path d="M0 -80 L20 -20 L80 -20 L32 20 L52 80 L0 40 L-52 80 L-32 20 L-80 -20 L-20 -20 Z" 
+          fill="#FFFFFF" opacity="0.9"/>
+    
+    <!-- Inner Star Glow -->
+    <path d="M0 -60 L15 -15 L60 -15 L24 15 L39 60 L0 30 L-39 60 L-24 15 L-60 -15 L-15 -15 Z" 
+          fill="#FFD700" opacity="0.8"/>
+    
+    <!-- Core Star -->
+    <path d="M0 -40 L10 -10 L40 -10 L16 10 L26 40 L0 20 L-26 40 L-16 10 L-40 -10 L-10 -10 Z" 
+          fill="#FFFFFF"/>
+  </g>
+  
+  <!-- IQ Brain/Intelligence Symbol -->
+  <g transform="translate(512, 580)">
+    <!-- Brain Outline -->
+    <path d="M-60 -40 C-80 -60 -80 -80 -60 -100 C-40 -120 40 -120 60 -100 C80 -80 80 -60 60 -40 
+             C60 -20 60 0 60 20 C60 40 40 60 20 60 L-20 60 C-40 60 -60 40 -60 20 
+             C-60 0 -60 -20 -60 -40 Z" 
+          fill="#4A90E2" stroke="#FFFFFF" stroke-width="4"/>
+    
+    <!-- Brain Details -->
+    <path d="M-40 -60 C-20 -80 20 -80 40 -60" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+    <path d="M-30 -40 C-10 -50 10 -50 30 -40" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M-35 -20 C-15 -30 15 -30 35 -20" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M-25 0 C-5 -10 5 -10 25 0" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    
+    <!-- IQ Text -->
+    <text x="0" y="35" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" 
+          font-size="32" font-weight="bold">IQ</text>
+  </g>
+  
+  <!-- Connecting Lines/Data Streams -->
+  <g opacity="0.6">
+    <!-- Left Data Stream -->
+    <path d="M200 400 Q300 350 400 400 Q450 420 500 400" 
+          stroke="#FFD700" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Right Data Stream -->
+    <path d="M824 400 Q724 350 624 400 Q574 420 524 400" 
+          stroke="#4A90E2" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="stroke-dasharray" values="0,20;20,0;0,20" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Bottom Data Streams -->
+    <path d="M300 700 Q400 650 500 700" 
+          stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0,15;15,0;0,15" dur="2s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M724 700 Q624 650 524 700" 
+          stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0,15;15,0;0,15" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Small Accent Stars -->
+  <g opacity="0.8">
+    <circle cx="200" cy="200" r="4" fill="#FFD700">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="824" cy="200" r="4" fill="#4A90E2">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="824" r="3" fill="#FFFFFF">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="874" cy="824" r="3" fill="#FFFFFF">
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

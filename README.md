@@ -16,7 +16,7 @@ A proof of concept financial analysis platform providing real-time market data, 
 ### Backend (FastAPI)
 - **API**: FastAPI with Python 3.12
 - **Database**: PostgreSQL with SQLAlchemy 2.0
-- **Cache**: Redis for performance optimization
+- **Cache**: Valkey (Redis-compatible) for performance optimization
 - **Tasks**: APScheduler for background data updates
 - **Testing**: pytest with comprehensive coverage
 
@@ -49,7 +49,7 @@ A proof of concept financial analysis platform providing real-time market data, 
 | Mobile App | React Native (Expo) + TypeScript |
 | Backend API | FastAPI + Python 3.12 |
 | Database | PostgreSQL + SQLAlchemy 2.0 |
-| Cache | Redis |
+| Cache | Valkey (Redis-compatible) |
 | State Management | TanStack Query |
 | Charts | Victory Native |
 | Background Tasks | APScheduler |
@@ -110,7 +110,7 @@ cp .env .env
 
 2. **Start services**:
 ```bash
-docker-compose up -d postgres redis
+docker-compose up -d postgres valkey
 poetry run alembic upgrade head
 poetry run uvicorn app.main:app --reload
 ```
@@ -138,8 +138,8 @@ yarn start
 # Database
 DATABASE_URL=postgresql://stellariq:stellariq_password@localhost:5432/stellariq
 
-# Redis
-REDIS_URL=redis://localhost:6379
+# Valkey (Redis-compatible)
+VALKEY_URL=redis://localhost:6379
 
 # API Keys (Alpha Vantage required)
 ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
@@ -240,7 +240,7 @@ Once the backend is running, visit:
 - **ReDoc**: http://localhost:8000/redoc
 
 ### Performance Tips
-- **Caching**: Redis cache reduces API calls significantly
+- **Caching**: Valkey cache reduces API calls significantly
 - **Rate limiting**: Built-in rate limiting respects API limits
 - **Background tasks**: Data updates happen automatically every 5 minutes
 
